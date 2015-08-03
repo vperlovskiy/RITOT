@@ -33,6 +33,7 @@
                         android:text="@string/watchface"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
+                        android:background="@android:color/transparent"
                         android:clickable="true" />
 
                     <ImageView
@@ -56,6 +57,7 @@
                         android:text="@string/settings"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
+                        android:background="@android:color/transparent"
                         android:clickable="true"/>
 
                     <ImageView
@@ -84,31 +86,28 @@
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:clickable="true"
+                        android:background="@android:color/transparent"
                         />
-
-                    <ImageView
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:ellipsize="end"
-                        android:maxLines="2"
-                        android:singleLine="false"
-                        android:src="@drawable/projection_colors"
-                        android:layout_centerHorizontal="true"
-                        android:clickable="false"
-                        android:id="@+id/imageView2" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Color"
-                        android:paddingTop="80dp"
+                        android:paddingTop="70dp"
                         android:id="@+id/textView"
-                        android:layout_centerHorizontal="true"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
-                        android:layout_alignBottom="@+id/imageView2" />
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageView
+                        android:layout_width="165dp"
+                        android:layout_height="165dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/projection_colors" />
                 </RelativeLayout>
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -124,7 +123,8 @@
                         android:text="@string/notifications"
                         android:textStyle="bold"
                         android:clickable="true"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:background="@android:color/transparent"/>
 
                     <ImageView
                         android:layout_width="165dp"
@@ -154,6 +154,7 @@
                         android:text="@string/apps"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
+                        android:background="@android:color/transparent"
                         android:clickable="true"/>
 
                     <ImageView
@@ -178,6 +179,7 @@
                         android:text="@string/fitness"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
+                        android:background="@android:color/transparent"
                         android:clickable="true"/>
 
                     <ImageView

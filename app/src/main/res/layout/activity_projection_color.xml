@@ -1,6 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:id="@+id/ivPhone"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/pj_colors"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtInCall"
+                android:layout_toEndOf="@+id/txtInCall"
+                android:layout_column="0"
+                android:layout_span="31" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="REMINDERS COLOR"
+                android:id="@+id/txtEnableReminders"
+                android:layout_below="@+id/txtREmindersColor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_column="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtPink"
+                android:text="PINK"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtChange"
+                android:text="CHANGE"
+                android:textColor="#c77be6"
+                android:textSize="14dp"
+                android:layout_column="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="MESSAGES COLOR"
+                android:id="@+id/txtMessagesColor"
+                android:layout_below="@+id/txtMessagesColor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtMsgColor"
+                android:text="VIOLET"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtChangeColor"
+                android:text="CHANGE"
+                android:textColor="#c77be6"
+                android:textSize="14dp"
+                android:layout_column="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="EMAILS COLOR"
+                android:id="@+id/txtEmailsColor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtEmailColor"
+                android:text="BLUE"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtChangeE_mailColor"
+                android:text="CHANGE"
+                android:textColor="#c77be6"
+                android:textSize="14dp"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="VIBER COLOR"
+                android:id="@+id/txtViberColor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/txtVColor"
+                    android:text="WHITE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/txtChangeEmailColor"
+                    android:text="CHANGE"
+                    android:textColor="#c77be6"
+                    android:textSize="14dp"
+                    android:layout_column="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="TWITTER COLOR"
+                android:id="@+id/txtTwitterColor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtTwitterColor"
+                android:text="WHITE"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtChangeEmailColor"
+                android:text="CHANGE"
+                android:textColor="#c77be6"
+                android:textSize="14dp"
+                android:layout_column="0" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="SAVE CHANGES"
+                android:textColor="#87fc70"
+                android:id="@+id/btnSaveChanges"
+                android:background="@android:color/transparent"
+                android:layout_span="31" />
+        </TableRow>
+
+    </TableLayout>
 
 </LinearLayout>
+

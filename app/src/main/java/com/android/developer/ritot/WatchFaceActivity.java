@@ -16,8 +16,6 @@ public class WatchFaceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_watchface);
 
-        Button button=(Button)findViewById(R.id.button);
-        button.setCompoundDrawables(new TextDrawable("Hour"), null, null, null);
     }
 
 
