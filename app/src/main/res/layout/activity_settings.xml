@@ -1,6 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="1">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INCOMING CALL"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:id="@+id/txtReminders"
+                android:layout_alignTop="@+id/ivInCall"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivPhone"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/phone"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtInCall"
+                android:layout_toEndOf="@+id/txtInCall" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SHOW CALLER'S NAME"
+                android:id="@+id/txtEnableReminders"
+                android:layout_below="@+id/txtReminders"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/swReminders"
+                android:layout_gravity="right"
+                android:layout_column="30" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtVibtration"
+                android:text="VIBRATION"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/swVibrattion"
+                android:layout_gravity="right"
+                android:layout_column="30"
+                android:checked="false" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="TIME MODE"
+                android:id="@+id/txtTimeMode"
+                android:layout_below="@+id/txtTimeMode"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivTimeMode"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/timer"
+                android:layout_centerVertical="true"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txt24H"
+                android:text="24H MODE"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/swTimeMode"
+                android:layout_gravity="right"
+                android:layout_column="30" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="HARD ROTATION"
+                android:id="@+id/txtHardRotation"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivHardRitation"
+                android:layout_column="16"
+                android:src="@drawable/rotation"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtHandMode"
+                android:text="RIGHT HAND MODE"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swHandMode"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="SHAKING TIME"
+                android:id="@+id/txtViber"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivShakingTime"
+                android:layout_column="16"
+                android:src="@drawable/shake_time"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="DISPLAY TIME WHEN SHAKE"
+                android:id="@+id/txtTwitter"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/swShakeTime"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+
+
+    </TableLayout>
 
 </LinearLayout>
+
