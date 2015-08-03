@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="17:23"
+        android:textColor="#FFFFFF"
+        android:textSize="100dp"
+        android:id="@+id/tvWatch"
+        android:gravity="center"
+        android:layout_weight="0.18" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/font_style"
+        android:background="#382633"
+        android:id="@+id/btnFontStyle"
+        android:textColor="#FFFFFF"
+        android:gravity="left|top"
+        android:layout_weight="0.05" />
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/font_color"
+    android:background="#382633"
+    android:id="@+id/btnFontColor"
+    android:textColor="#FFFFFF"
+    android:gravity="left|top"
+    android:layout_weight="0.05" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_settings"
+        android:background="#382633"
+        android:id="@+id/btnSaveSettings"
+        android:textColor="#87fc70"
+        android:gravity="center"
+        android:layout_weight="0.05" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_settings"
+        android:background="#382633"
+        android:id="@+id/button"
+        android:textColor="#87fc70"
+        android:gravity="center"
+        android:layout_weight="0.05" />
+</LinearLayout>
