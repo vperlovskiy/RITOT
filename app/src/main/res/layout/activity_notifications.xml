@@ -1,6 +1,448 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="1">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="REMINDERS"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:id="@+id/txtReminders"
+                android:layout_alignTop="@+id/ivBell"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivBell"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/bell"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtReminders"
+                android:layout_toEndOf="@+id/txtReminders" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ENABLE REMINDERS"
+                android:id="@+id/txtEnableReminders"
+                android:layout_below="@+id/txtReminders"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/swReminders"
+                android:layout_gravity="right"
+                android:layout_column="30" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtMessages"
+                android:text="MESSAGES"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_column="0" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivMessages"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/messages"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtReminders"
+                android:layout_toEndOf="@+id/txtReminders" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SHOW MESSAGE TEXT"
+                android:id="@+id/txtShowMsgText"
+                android:layout_below="@+id/txtReminders"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/swE_MAIL"
+                android:layout_gravity="right"
+                android:layout_column="30"
+                android:checked="false" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtEMAIL"
+                android:text="E-MAILS"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_column="0" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivE_Mails"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/e_mails"
+                android:layout_centerVertical="true"
+                 />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="SHOW MESSAGE TEXT"
+                android:id="@+id/txtShowEMailText"
+                android:layout_below="@+id/txtReminders"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:layout_column="0" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/swMessages"
+                android:layout_gravity="right"
+                android:layout_column="30" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txtSocialMessages"
+                android:text="SOCIAL MESSAGES"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="VIBER"
+                android:id="@+id/txtViber"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivViber"
+                android:layout_column="16"
+                android:src="@drawable/viber"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swViber"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="TWITTER"
+            android:id="@+id/txtTwitter"
+            android:layout_column="0"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivTwitter"
+            android:layout_column="16"
+            android:src="@drawable/twitter"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Switch"
+            android:id="@+id/swTwitter"
+            android:layout_column="30"
+            android:checked="false"
+            android:clickable="false"
+            android:shadowColor="#850583"
+            android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="FACEBOOK"
+            android:id="@+id/txtFacebook"
+            android:layout_column="0"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivFacebook"
+            android:layout_column="16"
+            android:src="@drawable/facebook"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Switch"
+            android:id="@+id/swFacebook"
+            android:layout_column="30"
+            android:checked="false"
+            android:clickable="false"
+            android:shadowColor="#850583"
+            android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="INSTAGRAM"
+                android:id="@+id/txtInstagram"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivInstagram"
+                android:layout_column="16"
+                android:src="@drawable/instagramm"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swInstagtam"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="SKYPE"
+                android:id="@+id/txtSkype"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivSkype"
+                android:layout_column="16"
+                android:src="@drawable/skype"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swSkype"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="WHATSAPP"
+                android:id="@+id/txtWhatsApp"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivWhatsApp"
+                android:layout_column="16"
+                android:src="@drawable/whatsapp"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swWhatsApp"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="OTHER"
+                android:id="@+id/txtOther"
+                android:layout_column="0"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivOther"
+                android:layout_column="16"
+                android:src="@drawable/other"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/swOther"
+                android:layout_column="30"
+                android:checked="false"
+                android:clickable="false"
+                android:shadowColor="#850583"
+                android:enabled="false" />
+
+        </TableRow>
+        <TableRow>
+        </TableRow>
+
+        <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="WEATHER"
+            android:id="@+id/txtWeather"
+            android:layout_column="0"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/ivWeather"
+            android:layout_column="16"
+            android:src="@drawable/weather"/>
+        </TableRow>
+        <TableRow>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Switch"
+            android:id="@+id/swWeather"
+            android:layout_column="30"
+            android:checked="false"
+            android:clickable="false"
+            android:shadowColor="#850583"
+            android:enabled="false" />
+        </TableRow>
+
+    </TableLayout>
 
 </LinearLayout>
+
