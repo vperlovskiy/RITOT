@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.android.developer.ritot.WatchFaceActivity"
+            android:label="WatchFace"></activity>
+
+        <activity
+            android:name="com.android.developer.ritot.SettingsActivity"
+            android:label="Settings"></activity>
+
+        <activity android:name=".NotificationActivity"
+            android:label="Notification"></activity>
+
+        <activity android:name=".ProjectionColorActivity"
+            android:label="Projection Color"></activity>
+
     </application>
 
 </manifest>

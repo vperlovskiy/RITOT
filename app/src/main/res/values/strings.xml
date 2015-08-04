@@ -17,8 +17,8 @@
     <string name="fitness">Fitness</string>
     <string name="connect">CONNECT</string>
     <string name="bluetooth">android:contentDescription=\"@string/desc\"</string>
-    <string name="font_color">font color</string>
-    <string name="font_style">font style</string>
+    <string name="font_color">FONT COLOR\n WHITE\tCHANGE</string>
+    <string name="font_style">FONT STYLE\n<n>   TECHNICAL BOLD</n></string>
     <string name="save_settings">save settings</string>
 
 </resources>

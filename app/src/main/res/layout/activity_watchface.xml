@@ -8,43 +8,150 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="189dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="17:23"
         android:textColor="#FFFFFF"
         android:textSize="100dp"
         android:id="@+id/tvWatch"
-        android:gravity="center"
-        android:layout_weight="0.18" />
+        android:gravity="center" />
 
-    <Button
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/font_style"
-        android:background="#382633"
-        android:id="@+id/btnFontStyle"
+        android:layout_height="300dp"
+                android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:gravity="left"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:text="FONT STYLE"
+                android:textSize="20dp"
+                android:id="@+id/txtFontStyle"
+                android:layout_column="0" />
+        </TableRow>
+
+    <TableRow>
+
+    </TableRow>
+    <TableRow>
+
+
+    </TableRow>
+    <TableRow>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TECHNICAL BOLD"
+        android:textSize="16dp"
         android:textColor="#FFFFFF"
-        android:gravity="left|top"
-        android:layout_weight="0.05" />
+        android:id="@+id/txtTechBold" />
 
-    <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/font_color"
-    android:background="#382633"
-    android:id="@+id/btnFontColor"
-    android:textColor="#FFFFFF"
-    android:gravity="left|top"
-    android:layout_weight="0.05" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="CHANGE"
+            android:gravity="center"
+            android:layout_marginRight="1dp"
+            android:textColor="#ad6ec8"
+            android:id="@+id/textView2" />
+    </TableRow>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/save_settings"
-        android:background="#382633"
-        android:id="@+id/btnSaveSettings"
-        android:textColor="#87fc70"
-        android:gravity="center"
-        android:layout_weight="0.05" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="30px"
+                android:layout_height="40px"
+                android:layout_column="0"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:text="FONT COLOR"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:id="@+id/txtFontColor" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="WHITE"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/txtWHITE" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="CHANGE"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:textColor="#ad6ec8"
+                android:id="@+id/txtChange" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <Space
+                android:layout_width="30px"
+                android:layout_height="200px"
+                android:layout_column="0"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/save_settings"
+                android:background="#382633"
+                android:id="@+id/btnSaveSettings"
+                android:textColor="#87fc70"
+                android:textSize="20dp"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_span="2"/>
+        </TableRow>
+
+
+
+    </TableLayout>
+
+<!--
+    <TextureView
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:id="@+id/textureView"
+        android:layout_gravity="right" />
+-->
 
 </LinearLayout>

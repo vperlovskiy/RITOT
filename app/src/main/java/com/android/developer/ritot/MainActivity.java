@@ -1,14 +1,44 @@
 package com.android.developer.ritot;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.BitSet;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    @Override
+
+    public void startWatchFace(View v){
+
+        Intent intent = new Intent(MainActivity.this, WatchFaceActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSettings(View v){
+
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void startProjectionColor(View v){
+        Intent intent = new Intent(MainActivity.this, ProjectionColorActivity.class);
+        startActivity(intent);
+    }
+
+    public void startNotification(View w){
+        Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+        startActivity(intent);
+    }
+
+
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

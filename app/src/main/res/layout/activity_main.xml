@@ -34,6 +34,7 @@
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
+                        android:onClick="startWatchFace"
                         android:clickable="true" />
 
                     <ImageView
@@ -58,6 +59,7 @@
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
+                        android:onClick="startSettings"
                         android:clickable="true"/>
 
                     <ImageView
@@ -87,6 +89,7 @@
                         android:textColor="#FFFFFF"
                         android:clickable="true"
                         android:background="@android:color/transparent"
+                        android:onClick="startProjectionColor"
                         />
 
                     <TextView
@@ -124,7 +127,8 @@
                         android:textStyle="bold"
                         android:clickable="true"
                         android:textColor="#FFFFFF"
-                        android:background="@android:color/transparent"/>
+                        android:background="@android:color/transparent"
+                        android:onClick="startNotification"/>
 
                     <ImageView
                         android:layout_width="165dp"
