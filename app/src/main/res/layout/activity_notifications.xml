@@ -1,104 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:weightSum="1">
 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+        <!--android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="700dp"
+        android:showDividers="middle"
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="205dp">
+        android:stretchColumns="1"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="REMINDERS"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                android:id="@+id/txtReminders"
-                android:layout_alignTop="@+id/ivBell"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+        android:shrinkColumns="*">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivBell"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/bell"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/txtReminders"
-                android:layout_toEndOf="@+id/txtReminders" />
 
-        </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:padding="1dp">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="ENABLE REMINDERS"
-                android:id="@+id/txtEnableReminders"
-                android:layout_below="@+id/txtReminders"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
                 android:layout_column="0" />
 
-            <Switch
-                android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+            </TableRow>-->
+
+            <!--<ListView
                 android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/swReminders"
-                android:layout_gravity="right"
-                android:layout_column="30" />
-        </TableRow>
+                android:layout_width="fill_parent"
+                android:id="@+id/listV_main"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"/>-->
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </TableRow>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="REMINDERS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:id="@+id/txtReminders"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingBottom="7dp"
+                        android:layout_marginStart="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txtMessages"
-                android:text="MESSAGES"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:padding="3dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivBell"
+                        android:src="@drawable/bell"
+                        android:layout_column="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtReminders"
+                        android:layout_toEndOf="@+id/txtReminders" />
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:id="@+id/tbRow0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="ENABLE REMINDERS"
+                    android:id="@+id/txtEnableReminders"
+                    android:layout_below="@+id/txtReminders"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="25dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton1"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:layout_weight="0"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                    android:layout_column="0">
+
+            </View>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="50px"
                 android:layout_column="0" />
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivMessages"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/messages"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/txtReminders"
-                android:layout_toEndOf="@+id/txtReminders" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
 
-        </TableRow>
+            </View>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/txtMessages"
+                        android:text="TEXT MESSAGES"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:id="@+id/ivMessages"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/paper_plane"
+                        android:layout_alignBottom="@+id/txtMessages"
+                        android:layout_toRightOf="@+id/txtMessages"
+                        android:layout_toEndOf="@+id/txtMessages" />
+
+                </RelativeLayout>
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:baselineAligned="false">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,337 +220,573 @@
                 android:layout_alignParentBottom="true"
                 android:textColor="#FFFFFF"
                 android:textSize="16dp"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:layout_marginLeft="30dp" />
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/swE_MAIL"
-                android:layout_gravity="right"
-                android:layout_column="30"
-                android:checked="true" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txtEMAIL"
-                android:text="E-MAILS"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                android:layout_column="0" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivE_Mails"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/e_mails"
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                 />
-
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="SHOW MESSAGE TEXT"
-                android:id="@+id/txtShowEMailText"
-                android:layout_below="@+id/txtReminders"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_column="0" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/toggle_selector"
+                android:checked="true"
                 android:text=""
-                android:id="@+id/swMessages"
-                android:layout_gravity="right"
-                android:layout_column="30" />
+                android:textOff=""
+                android:textOn=""
+                android:layout_column="2" />
         </TableRow>
 
-        <TableRow
+<!--
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0.5dp"
+            android:background="#dbd9db"
+            android:layout_column="0">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txtSocialMessages"
-                android:text="SOCIAL MESSAGES"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
+        </View>
+-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#c8c7cc"
+            android:layout_column="0">
+
+        </View>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/txtEMAIL"
+                        android:text="E-MAILS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:id="@+id/ivEMails"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/text_messages"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtEMAIL"
+                        android:layout_toEndOf="@+id/txtEMAIL"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </RelativeLayout>
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="SHOW MESSAGE TEXT"
+                    android:id="@+id/txtShowEMailText"
+                    android:layout_below="@+id/txtReminders"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="25dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="50px"
                 android:layout_column="0" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/txtSocialMessages"
+                    android:text="SOCIAL MESSAGES"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="15dp" />
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="VIBER"
+                        android:id="@+id/txtViber"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="21dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivViber"
+                        android:layout_column="1"
+                        android:padding="3dp"
+                        android:src="@drawable/viber"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/txtViber"
+                        android:layout_alignStart="@+id/txtViber"
+                        android:layout_marginLeft="51dp"
+                        android:layout_marginStart="51dp" />
+
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="TWITTER"
+                        android:id="@+id/txtTwitter"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivTwitter"
+                        android:layout_column="1"
+                        android:src="@drawable/twitter"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtTwitter"
+                        android:layout_toEndOf="@+id/txtTwitter" />
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0"
+                    android:layout_marginLeft="25dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="FACEBOOK"
+                        android:id="@+id/txtFacebook"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivFacebook"
+                        android:layout_column="1"
+                        android:padding="3dp"
+                        android:src="@drawable/facebook"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtFacebook"
+                        android:layout_toEndOf="@+id/txtFacebook" />
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton6"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="INSTAGRAM"
+                        android:id="@+id/txtInstagram"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivInstagram"
+                        android:layout_column="1"
+                        android:padding="3dp"
+                        android:src="@drawable/instagramm"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtInstagram"
+                        android:layout_toEndOf="@+id/txtInstagram" />
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton7"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="SKYPE"
+                        android:id="@+id/txtSkype"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivSkype"
+                        android:layout_column="1"
+                        android:padding="0dp"
+                        android:src="@drawable/skype"
+                        android:layout_toRightOf="@+id/txtSkype"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton8"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+            </TableRow>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+            <TableRow android:padding="7dp">
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="WHATSAPP"
+                        android:id="@+id/txtWhatsApp"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginStart="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivWhatsApp"
+                        android:padding="2dp"
+                        android:layout_column="1"
+                        android:src="@drawable/whatsapp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtWhatsApp"
+                        android:layout_toEndOf="@+id/txtWhatsApp" />
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="50px"
+                android:layout_column="0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <TableRow android:padding="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="WEATHER"
+                        android:id="@+id/txtWheather"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="15dp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivWeather"
+                        android:layout_column="1"
+                        android:src="@drawable/weather"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtWheather"
+                        android:layout_toEndOf="@+id/txtWheather" />
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:background="#c8c7cc"/>
+
+        <TableRow android:padding="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="ENABLE WHEATHER INFO"
+                    android:id="@+id/txtWeather"
+                    android:layout_column="0"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="25dp" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton10"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_selector"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:layout_column="2" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton9"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_selector"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:layout_column="3"
+                android:visibility="invisible" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="VIBER"
-                android:id="@+id/txtViber"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivViber"
-                android:layout_column="16"
-                android:src="@drawable/viber"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swViber"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-        </TableRow>
-        <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="TWITTER"
-            android:id="@+id/txtTwitter"
-            android:layout_column="0"
-            android:textColor="#FFFFFF"
-            android:textSize="16dp"/>
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/ivTwitter"
-            android:layout_column="16"
-            android:src="@drawable/twitter"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Switch"
-            android:id="@+id/swTwitter"
-            android:layout_column="30"
-            android:checked="false"
-            android:clickable="false"
-            android:shadowColor="#850583"
-            android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="FACEBOOK"
-            android:id="@+id/txtFacebook"
-            android:layout_column="0"
-            android:textColor="#FFFFFF"
-            android:textSize="16dp"/>
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/ivFacebook"
-            android:layout_column="16"
-            android:src="@drawable/facebook"/>
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Switch"
-            android:id="@+id/swFacebook"
-            android:layout_column="30"
-            android:checked="false"
-            android:clickable="false"
-            android:shadowColor="#850583"
-            android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="INSTAGRAM"
-                android:id="@+id/txtInstagram"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivInstagram"
-                android:layout_column="16"
-                android:src="@drawable/instagramm"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swInstagtam"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="SKYPE"
-                android:id="@+id/txtSkype"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivSkype"
-                android:layout_column="16"
-                android:src="@drawable/skype"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swSkype"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="WHATSAPP"
-                android:id="@+id/txtWhatsApp"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivWhatsApp"
-                android:layout_column="16"
-                android:src="@drawable/whatsapp"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swWhatsApp"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="OTHER"
-                android:id="@+id/txtOther"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivOther"
-                android:layout_column="16"
-                android:src="@drawable/other"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swOther"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-
-        </TableRow>
-        <TableRow>
-        </TableRow>
-
-        <TableRow>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="WEATHER"
-            android:id="@+id/txtWeather"
-            android:layout_column="0"
-            android:textColor="#FFFFFF"
-            android:textSize="16dp"/>
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:id="@+id/ivWeather"
-            android:layout_column="16"
-            android:src="@drawable/weather"/>
-        </TableRow>
-        <TableRow>
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Switch"
-            android:id="@+id/swWeather"
-            android:layout_column="30"
-            android:checked="false"
-            android:clickable="false"
-            android:shadowColor="#850583"
-            android:enabled="false" />
-        </TableRow>
-
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#c8c7cc"/>
     </TableLayout>
-
-</LinearLayout>
-
+  </LinearLayout>
+</ScrollView>

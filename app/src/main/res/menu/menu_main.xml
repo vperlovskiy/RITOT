@@ -3,4 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_speech"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:showAsAction="ifRoom"
+        android:title="Speech"/>
+    <item android:id="@+id/action_call"
+        android:icon="@drawable/arrow"
+        android:showAsAction="ifRoom"
+        android:title="Call"/>
+    <item android:id="@+id/action_done"
+        android:icon="@drawable/apps"
+        android:showAsAction="ifRoom"
+        android:title="Done"/>
+    <item android:id="@+id/action_contacts"
+        android:showAsAction="never"
+        android:title="Contacts"/>
+    <item android:id="@+id/action_settings"
+        android:showAsAction="never"
+        android:title="Settings"/>
+    <item android:id="@+id/action_status"
+        android:showAsAction="never"
+        android:title="Status" />
+
 </menu>

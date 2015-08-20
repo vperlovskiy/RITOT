@@ -4,45 +4,58 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical" >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:weightSum="10" >
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             android:stretchColumns="*" >
-            <TableRow android:layout_weight="1" >
+
+            <TableRow
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <Button
                         android:id="@+id/btnWatchFace"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
                         android:paddingTop="90dp"
                         android:textSize="16sp"
                         android:inputType="textCapWords"
-                        android:text="@string/watchface"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
                         android:onClick="startWatchFace"
-                        android:clickable="true" />
+                        android:clickable="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
 
                     <ImageView
-                        android:id="@+id/main_icon_content_image_view"
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/watch_face" />
+                        android:id="@+id/ivWatchFace"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/watchface"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="14dp"
+                        android:text="WatchFace"
+                        android:id="@+id/txtWatchFace"
+                        android:textColor="#ffff"
+                        android:layout_alignBottom="@id/ivWatchFace"
+                        android:layout_centerHorizontal="true" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -55,62 +68,87 @@
                         android:paddingTop="90dp"
                         android:textSize="16sp"
                         android:inputType="textCapWords"
-                        android:text="@string/settings"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
                         android:onClick="startSettings"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
 
                     <ImageView
-                        android:id="@+id/main_icon_schedule_image_view"
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:layout_centerInParent="true"
+                        android:id="@+id/ivSettings"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/settings" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ffff"
+                        android:text="Settings"
+                        android:id="@+id/txtSettings"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignBottom="@id/ivSettings"/>
                 </RelativeLayout>
             </TableRow>
-            <TableRow android:layout_weight="1" >
+            <TableRow  android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <Button
+                     <Button
                         android:id="@+id/btnProjectionColor"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:ellipsize="marquee"
-                        android:paddingTop="90dp"
+
                         android:textSize="16sp"
                         android:inputType="textCapWords"
-                        android:text="@string/projection_color"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:clickable="true"
                         android:background="@android:color/transparent"
-                        android:onClick="startProjectionColor"
-                        />
+                        android:onClick="startProjectionColor"/>
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/colors"
+                        android:id="@+id/ivPJColor" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ffff"
+                        android:text="Projection"
+                        android:id="@+id/txtProjection"
+                        android:layout_alignBottom="@id/ivPJColor"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Color"
-                        android:paddingTop="70dp"
-                        android:id="@+id/textView"
-                        android:textStyle="bold"
-                        android:textColor="#FFFFFF"
-                        android:textSize="16sp"
+                        android:textColor="#ffff"
+                        android:id="@+id/txtColor"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true" />
 
-                    <ImageView
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/projection_colors" />
                 </RelativeLayout>
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -120,10 +158,10 @@
                         android:id="@+id/btnNotifications"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="90dp"
+
                         android:textSize="16sp"
                         android:inputType="textCapWords"
-                        android:text="@string/notifications"
+                        android:text=""
                         android:textStyle="bold"
                         android:clickable="true"
                         android:textColor="#FFFFFF"
@@ -131,19 +169,28 @@
                         android:onClick="startNotification"/>
 
                     <ImageView
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/notifications" />
+                        android:src="@drawable/notifications"
+                        android:id="@+id/ivNotifications" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Notifications"
+                        android:id="@+id/txtNotifications"
+                        android:textColor="#ffff"
+                        android:layout_alignBottom="@id/ivNotifications"
+
+                        android:layout_centerHorizontal="true" />
                 </RelativeLayout>
 
 
             </TableRow>
 
-            <TableRow
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+            <TableRow android:layout_weight="1">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
@@ -155,23 +202,30 @@
                         android:paddingTop="90dp"
                         android:textSize="16sp"
                         android:inputType="textCapWords"
-                        android:text="@string/apps"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
                         android:clickable="true"/>
 
                     <ImageView
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:layout_centerInParent="true"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:id="@+id/ivApps"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/apps" />
 
-                </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/apps"
+                        android:id="@+id/txtApps"
+                        android:textColor="#ffff"
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                        android:layout_alignBottom="@id/ivApps"
+                        android:layout_centerHorizontal="true" />
 
                     <Button
                         android:id="@+id/btnFitness"
@@ -180,17 +234,38 @@
                         android:inputType="textCapWords"
                         android:paddingTop="90dp"
                         android:textSize="16sp"
-                        android:text="@string/fitness"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
                         android:background="@android:color/transparent"
-                        android:clickable="true"/>
+                        android:clickable="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
                     <ImageView
-                        android:layout_width="165dp"
-                        android:layout_height="165dp"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/fitness" />
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/fitness"
+                        android:id="@+id/ivFitness"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/fitness"
+                        android:id="@+id/txtFintess"
+                        android:textColor="#ffff"
+                        android:layout_alignBottom="@id/ivFitness"
+                        android:layout_centerHorizontal="true" />
                 </RelativeLayout>
             </TableRow>
             <TableRow android:background="#372532">
@@ -246,4 +321,3 @@
 
 </LinearLayout>
 
-</LinearLayout>

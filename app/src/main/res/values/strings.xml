@@ -20,5 +20,5 @@
     <string name="font_color">FONT COLOR\n WHITE\tCHANGE</string>
     <string name="font_style">FONT STYLE\n<n>   TECHNICAL BOLD</n></string>
     <string name="save_settings">save settings</string>
-
+    <string name="title_activity_display_message">!!!</string>
 </resources>

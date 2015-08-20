@@ -8,11 +8,11 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="189dp"
+        android:layout_height="150dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="17:23"
         android:textColor="#FFFFFF"
-        android:textSize="100dp"
+        android:textSize="80dp"
         android:id="@+id/tvWatch"
         android:gravity="center" />
 
@@ -23,23 +23,24 @@
 
         <TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:layout_marginLeft="15dp"
-                android:gravity="left"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#FFFFFF"
-                android:text="FONT STYLE"
-                android:textSize="20dp"
-                android:id="@+id/txtFontStyle"
-                android:layout_column="0" />
         </TableRow>
 
     <TableRow>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:gravity="left"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:text="FONT STYLE"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:id="@+id/txtFontStyle"
+            android:layout_column="0" />
     </TableRow>
     <TableRow>
 
@@ -47,15 +48,14 @@
     </TableRow>
     <TableRow>
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="TECHNICAL BOLD"
-        android:textSize="16dp"
-        android:textColor="#FFFFFF"
-        android:id="@+id/txtTechBold" />
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="TECHNICAL BOLD"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/txtWHITE1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,8 +64,8 @@
             android:text="CHANGE"
             android:gravity="center"
             android:layout_marginRight="1dp"
-            android:textColor="#ad6ec8"
-            android:id="@+id/textView2" />
+            android:textColor="#b500b7"
+            android:id="@+id/tvChangeStyle" />
     </TableRow>
 
         <TableRow
@@ -83,13 +83,18 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF"
                 android:text="FONT COLOR"
-                android:layout_marginLeft="15dp"
                 android:textSize="20dp"
-                android:id="@+id/txtFontColor" />
+                android:padding="10dp"
+                android:id="@+id/txtFontColor"
+                android:layout_column="0" />
         </TableRow>
         <TableRow>
             <TextView
@@ -98,7 +103,6 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="WHITE"
                 android:textSize="16dp"
-                android:gravity="left"
                 android:textColor="#FFFFFF"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/txtWHITE" />
@@ -110,8 +114,8 @@
                 android:text="CHANGE"
                 android:gravity="center"
                 android:layout_marginRight="1dp"
-                android:textColor="#ad6ec8"
-                android:id="@+id/txtChange" />
+                android:textColor="#b500b7"
+                android:id="@+id/tvChangeColor" />
 
         </TableRow>
 
@@ -119,7 +123,7 @@
         <TableRow>
             <Space
                 android:layout_width="30px"
-                android:layout_height="200px"
+                android:layout_height="100px"
                 android:layout_column="0"
                 android:layout_span="2" />
         </TableRow>
@@ -132,7 +136,7 @@
                 android:text="@string/save_settings"
                 android:background="#382633"
                 android:id="@+id/btnSaveSettings"
-                android:textColor="#87fc70"
+                android:textColor="#007aff"
                 android:textSize="20dp"
                 android:textAllCaps="true"
                 android:gravity="center"

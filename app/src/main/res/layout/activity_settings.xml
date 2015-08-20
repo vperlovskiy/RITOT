@@ -1,60 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@drawable/background"
-    android:weightSum="1">
+    android:orientation="vertical">
+    <!--android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
 
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="512dp">
 
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner" />
-        </TableRow>
-
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="205dp">
+            android:layout_height="519dp"
+            android:showDividers="middle"
+            android:stretchColumns="1"
+            android:shrinkColumns="*">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:padding="1dp">
+
+                <Space
+                    android:layout_width="20px"
+                    android:layout_height="60px" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0" /><![CDATA[
+
+            -->
+
+            ]]><!--<ListView
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:id="@+id/listV_main"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"/>-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="INCOMING CALL"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:id="@+id/txtIncomingCall"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:padding="3dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/ivBell"
+                        android:src="@drawable/phone"
+                        android:layout_column="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/txtIncomingCall"
+                        android:layout_toEndOf="@+id/txtIncomingCall" />
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
+
+
+            <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:id="@+id/tbRow0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="INCOMING CALL"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                android:id="@+id/txtReminders"
-                android:layout_alignTop="@+id/ivInCall"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivPhone"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/phone"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/txtInCall"
-                android:layout_toEndOf="@+id/txtInCall" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="SHOW CALLER'S NAME"
+                android:text="SHOW CALLER`S NAME"
                 android:id="@+id/txtEnableReminders"
                 android:layout_below="@+id/txtReminders"
                 android:layout_alignParentLeft="true"
@@ -62,191 +120,389 @@
                 android:layout_alignParentBottom="true"
                 android:textColor="#FFFFFF"
                 android:textSize="16dp"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:layout_marginLeft="25dp" />
 
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/swReminders"
-                android:layout_gravity="right"
-                android:layout_column="30" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txtVibtration"
-                android:text="VIBRATION"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_column="0" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/swVibrattion"
-                android:layout_gravity="right"
-                android:layout_column="30"
-                android:checked="false" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="TIME MODE"
-                android:id="@+id/txtTimeMode"
-                android:layout_below="@+id/txtTimeMode"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_column="0" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivTimeMode"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/timer"
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txt24H"
-                android:text="24H MODE"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_column="0" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/swTimeMode"
-                android:layout_gravity="right"
-                android:layout_column="30" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="HARD ROTATION"
-                android:id="@+id/txtHardRotation"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_column="0" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivHardRitation"
-                android:layout_column="16"
-                android:src="@drawable/rotation"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/txtHandMode"
-                android:text="RIGHT HAND MODE"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"
-                android:layout_column="0" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Switch"
-                android:id="@+id/swHandMode"
-                android:layout_column="30"
+                android:background="@drawable/toggle_selector"
                 android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="SHAKING TIME"
-                android:id="@+id/txtViber"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="18dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:id="@+id/ivShakingTime"
-                android:layout_column="16"
-                android:src="@drawable/shake_time"/>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="DISPLAY TIME WHEN SHAKE"
-                android:id="@+id/txtTwitter"
-                android:layout_column="0"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"/>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text=""
-                android:id="@+id/swShakeTime"
-                android:layout_column="30"
-                android:checked="false"
-                android:clickable="false"
-                android:shadowColor="#850583"
-                android:enabled="false" />
+                android:textOff=""
+                android:textOn=""
+                android:layout_column="2" />
+
 
         </TableRow>
 
 
-    </TableLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
 
-</LinearLayout>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:id="@+id/tbRow1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="VIBRATION"
+                    android:id="@+id/txtVibrations"
+                    android:layout_below="@+id/txtVibrations"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="25dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:layout_weight="0"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="50px"
+                android:layout_column="0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/txtMessages"
+                        android:text="TIME MODE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_column="0"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:id="@+id/ivTimer"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/timer"
+                        android:layout_alignBottom="@+id/txtMessages"
+                        android:layout_toRightOf="@+id/txtMessages"
+                        android:layout_toEndOf="@+id/txtMessages" />
+
+                </RelativeLayout>
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="24H MODE"
+                    android:id="@+id/txtShowMsgText"
+                    android:layout_below="@+id/txtReminders"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="30dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+            </TableRow>
+
+            <!--
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#dbd9db"
+                        android:layout_column="0">
+
+                    </View>
+            -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/txtHandRotation"
+                        android:text="HAND ROTATION"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:layout_column="0"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:id="@+id/ivEMails"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/rotation"
+                        android:layout_alignBottom="@+id/txtHandRotation"
+                        android:layout_toRightOf="@+id/txtHandRotation"
+                        android:layout_toEndOf="@+id/txtHandRotation" />
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="SHOW MESSAGE TEXT"
+                    android:id="@+id/txtShowEMailText"
+                    android:layout_below="@+id/txtReminders"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="25dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="50px"
+                android:layout_column="0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"
+                android:layout_column="0">
+
+            </View>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/txtSocialMessages"
+                    android:text="SHAKING TIME"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:id="@+id/ivShakeTime"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/shake_time"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/txtSocialMessages"
+                    android:layout_toEndOf="@+id/txtSocialMessages" />
+
+            </RelativeLayout>
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="30dp"
+                android:background="#c8c7cc"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="7dp">
+
+                <RelativeLayout android:layout_column="0">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DISPLAY TIME WHEN SHAKE"
+                        android:id="@+id/txtViber"
+                        android:layout_column="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="2" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton9"
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_column="3"
+                    android:visibility="invisible" />
+            </TableRow>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#c8c7cc"/>
+        </TableLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>
